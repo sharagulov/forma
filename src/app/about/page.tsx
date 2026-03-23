@@ -136,8 +136,7 @@ export default function AboutPage() {
           <ol className="mt-12 space-y-10 border-l border-[var(--line)] pl-8">
             {milestones.map((ms, i) => (
               <ScrollReveal key={ms.year} delay={i * 40}>
-                <li className="relative">
-                  <span className="absolute -left-[38px] top-1 h-3 w-3 rounded-full bg-[var(--accent)]" />
+                <li>
                   <p className="text-xs font-medium uppercase tracking-[0.14em] text-[var(--muted)]">
                     {ms.year}
                   </p>
