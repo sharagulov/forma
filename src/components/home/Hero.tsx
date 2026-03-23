@@ -60,7 +60,7 @@ export function Hero() {
         </p>
         <AnimatedText
           text="Spaces that breathe with their place."
-          className="font-[family-name:var(--font-display)] text-4xl leading-[1.05] text-white md:text-6xl lg:text-7xl"
+          className="font-[family-name:var(--font-display)] text-4xl leading-[1.12] text-white md:text-6xl md:leading-[1.1] lg:text-7xl lg:leading-[1.08]"
         />
         <p className="mt-8 max-w-lg text-lg text-white/85 md:text-xl">
           FORMA designs residential and public architecture where material,

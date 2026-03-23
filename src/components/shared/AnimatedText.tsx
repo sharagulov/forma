@@ -38,7 +38,10 @@ export function AnimatedText({
   return (
     <h1 ref={containerRef} className={className}>
       {words.map((w, i) => (
-        <span key={`${w}-${i}`} className="inline-block overflow-hidden">
+        <span
+          key={`${w}-${i}`}
+          className="inline-block overflow-hidden align-baseline pb-[0.12em]"
+        >
           <span data-word className="inline-block will-change-transform">
             {w}
             {i < words.length - 1 ? "\u00A0" : ""}
