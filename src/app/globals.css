@@ -1,0 +1,81 @@
+@import "tailwindcss";
+@import "lenis/dist/lenis.css";
+
+:root {
+  --font-general: "General Sans", system-ui, sans-serif;
+  --bg: #f5f2ee;
+  --fg: #1a1a1a;
+  --muted: #7a7a72;
+  --accent: #c4724e;
+  --line: #e0ddd8;
+  --surface: #ffffff;
+}
+
+html.dark {
+  --bg: #1a1a1a;
+  --fg: #f5f2ee;
+  --muted: #a8a89e;
+  --accent: #d48768;
+  --line: #2e2e2e;
+  --surface: #222222;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-fg: var(--fg);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --color-line: var(--line);
+  --color-surface: var(--surface);
+  --font-display: var(--font-playfair), "Times New Roman", serif;
+  --font-sans: var(--font-general), system-ui, sans-serif;
+  --ease-out-expo: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@layer base {
+  html {
+    scroll-behavior: auto;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--fg);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  ::selection {
+    background: color-mix(in srgb, var(--accent) 35%, transparent);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+  }
+}
+
+@utility container-forma {
+  width: 100%;
+  max-width: 1400px;
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+  @media (min-width: 768px) {
+    padding-inline: 3rem;
+  }
+  @media (min-width: 1024px) {
+    padding-inline: 5rem;
+  }
+}

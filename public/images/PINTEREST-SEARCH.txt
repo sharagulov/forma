@@ -1,0 +1,52 @@
+FORMA — подбор референсов под темы (old money / quiet luxury)
+
+--- Главная: горизонтальная лента «Atmosphere» (Material and light…)
+Папка: public/images/strip/
+Файлы (ровно 5 штук, один стиль кадра):
+  01.png  02.png  03.png  04.png  05.png
+Пути на сайте: /images/strip/01.png … /images/strip/05.png
+(заданы в src/data/photo-strip.ts)
+
+--- About: команда
+Папка: public/images/team/
+Файлы: 01.png … 04.png (порядок как на странице About)
+
+--- Проекты
+Файлы кладёшь в папки по slug: public/images/projects/<slug>/
+
+Публичное имя на сайте → папка (slug, URL /projects/<slug>)
+  Seaward Estate          → tidal-house
+  Birch Grove Hall        → birch-pavilion
+  Stone Court Residence   → stone-and-light
+  Highland Seat           → ridge-retreat
+  The Reading Hall        → frame-library
+  Silk Court              → silk-loft
+
+--- Estate & Grounds (поместья, парки, фасады)
+Проекты: tidal-house, ridge-retreat
+Идеи запросов в Pinterest:
+  old money estate architecture
+  limestone manor exterior
+  heritage country house facade
+  classic estate driveway
+  quiet luxury home exterior
+  traditional coastal estate house
+
+--- Heritage Interiors (панели, квартиры, библиотечные комнаты)
+Проекты: stone-and-light, silk-loft
+  old money interior aesthetic
+  wood panelled living room
+  heritage apartment interior
+  classic library room design
+  prewar apartment interior
+  understated luxury interior
+
+--- Civic & Club (клубная сдержанность, читальни, спокойная публичка)
+Проекты: birch-pavilion, frame-library
+  classical library interior architecture
+  heritage civic building interior
+  private members club aesthetic
+  old money public building
+  traditional reading room architecture
+
+Подробные подсказки в коде: src/data/category-pinterest.ts
