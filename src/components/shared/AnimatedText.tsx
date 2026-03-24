@@ -40,9 +40,12 @@ export function AnimatedText({
       {words.map((w, i) => (
         <span
           key={`${w}-${i}`}
-          className="inline-block overflow-hidden align-baseline pb-[0.12em]"
+          className="inline-block overflow-hidden align-baseline pb-[0.01em]"
         >
-          <span data-word className="inline-block will-change-transform">
+          <span
+            data-word
+            className="inline-block will-change-transform pb-[0.08em]"
+          >
             {w}
             {i < words.length - 1 ? "\u00A0" : ""}
           </span>
