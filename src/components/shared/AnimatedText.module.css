@@ -1,16 +1,22 @@
 /**
- * Отдельный модуль: Tailwind v4 при прод-сборке не гарантирует сохранение
- * произвольных классов / кастомных @layer из globals — модуль всегда в бандле.
+ * Даём запас снизу и одновременно компенсируем его отрицательным margin,
+ * чтобы descenders (p/g/y) не срезались, но общий ритм макета не менялся.
  */
+.root {
+  padding-bottom: 0.16em;
+  margin-bottom: -0.16em;
+}
+
 .mask {
   display: inline-block;
   overflow: hidden;
   vertical-align: baseline;
-  padding-bottom: 0.02em;
+  padding-bottom: 0.22em;
+  margin-bottom: -0.08em;
 }
 
 .word {
   display: inline-block;
   will-change: transform;
-  padding-bottom: 0.02em;
+  padding-bottom: 0.08em;
 }
