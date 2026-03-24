@@ -60,3 +60,6 @@ Thumbs.db
 
 # Optional local tooling
 *.local
+
+# Отчёты agent-пайплайна (локально, не в репозиторий)
+.agents/
