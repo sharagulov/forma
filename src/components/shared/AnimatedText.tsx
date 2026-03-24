@@ -2,6 +2,7 @@
 
 import gsap from "gsap";
 import { useEffect, useRef } from "react";
+import styles from "./AnimatedText.module.css";
 
 export function AnimatedText({
   text,
@@ -38,14 +39,8 @@ export function AnimatedText({
   return (
     <h1 ref={containerRef} className={className}>
       {words.map((w, i) => (
-        <span
-          key={`${w}-${i}`}
-          className="inline-block overflow-hidden align-baseline pb-[0.01em]"
-        >
-          <span
-            data-word
-            className="inline-block will-change-transform pb-[0.08em]"
-          >
+        <span key={`${w}-${i}`} className={styles.mask}>
+          <span data-word className={styles.word}>
             {w}
             {i < words.length - 1 ? "\u00A0" : ""}
           </span>

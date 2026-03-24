@@ -1,0 +1,16 @@
+/**
+ * Отдельный модуль: Tailwind v4 при прод-сборке не гарантирует сохранение
+ * произвольных классов / кастомных @layer из globals — модуль всегда в бандле.
+ */
+.mask {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: baseline;
+  padding-bottom: 0.02em;
+}
+
+.word {
+  display: inline-block;
+  will-change: transform;
+  padding-bottom: 0.02em;
+}
